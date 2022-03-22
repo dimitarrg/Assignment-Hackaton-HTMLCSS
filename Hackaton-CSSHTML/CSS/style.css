@@ -1,0 +1,185 @@
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: #d7d6d6;
+}
+
+img {
+  width: 100%;
+  margin: 0;
+  border: solid black 3px;
+  box-shadow: 8px 8px red;
+}
+
+li {
+  border-bottom: solid black 6px;
+}
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover {
+  background-color: #b37820;
+  color: white;
+}
+
+iframe {
+  border: solid black 3px;
+  box-shadow: 8px 8px red;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr 40px;
+  grid-template-areas:
+    "h n"
+    "m m"
+    "w w"
+    "f f";
+}
+
+.header {
+  grid-area: h;
+  font-size: 26px;
+  text-decoration: overline 6px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.header a:hover {
+  text-decoration: none;
+  color: #b37820;
+}
+
+.nav {
+  grid-area: n;
+  margin: 20px;
+  text-align: right;
+  color: white;
+  font-weight: 900;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+.nav li a {
+  display: block;
+  margin: 0;
+  padding: 5px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.main {
+  grid-area: m;
+}
+
+.main-box-1 {
+  border: solid #b37820 6px;
+  font-size: large;
+  padding: 5px;
+  margin: 0px;
+}
+
+.main h1 {
+  padding: 10px;
+}
+
+.widget {
+  grid-area: w;
+  background-color: #b37820;
+}
+
+.widget-box-1 h2 {
+  font-size: large;
+  margin-left: 0px;
+  padding-left: 0px;
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.widget-box-1 img {
+  width: 80%;
+  margin: 0;
+  border: solid black 3px;
+  box-shadow: 8px 8px red;
+}
+
+.widget h1 {
+  margin-left: 20px;
+  padding-left: 20px;
+  color: black;
+  text-decoration: underline 6px;
+}
+
+.footer {
+  grid-area: f;
+  background-color: #cbc8c8;
+  color: #257d00;
+  text-align: center;
+  font-size: 11px;
+  position: absolute;
+  width: 100%;
+
+  left: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: 350px auto 400px;
+    grid-template-rows: 100px auto 40px;
+    grid-template-areas:
+      "h m w"
+      "n m w"
+      "f f f";
+    margin: 10px;
+  }
+  .header {
+    font-size: smaller;
+  }
+
+  .nav li a {
+    text-align: left;
+  }
+
+  .main {
+    grid-area: m;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-box-1 {
+    border: solid #b37820 7px;
+    font-size: 36px;
+    margin-top: 5px;
+  }
+
+  .widget {
+    margin-left: 30px;
+    right: 0;
+  }
+
+  .widget h1 {
+    margin: 10px;
+    padding: 0;
+  }
+
+  .widget-box-1 {
+    padding: 10px 10px;
+  }
+}
